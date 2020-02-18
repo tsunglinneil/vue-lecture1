@@ -8,6 +8,18 @@
     <div>
         <input type="text" v-bind:value="greet">
     </div>
+
+    <hr>
+
+    <button v-on:click="increase">click to increase count</button>
+    <p>{{count}}</p>
+
+    <hr>
+    
+    <div>
+        <input type="text" v-on:keyup.enter="displayMsg($event)">
+    </div>
+    <p>msg is {{msg}}</p>
 </div>
 
 <script src="app.js"></script>
