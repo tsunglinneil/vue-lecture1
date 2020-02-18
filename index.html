@@ -1,6 +1,13 @@
 <script src="https://unpkg.com/vue/dist/vue.js"></script>
 
 <div id="app">
+    <button @click="increase">click to increase firstCount</button>
+    <button @click="decrease">click to decrease firstCount</button>
+    <button @click="increaseSecond">click to increase secondCount</button>
+    <p>{{firstCount}} | {{secondCount}}</p>
+    <p>Computed descComputed: {{descComputed}}</p>
+    <p>Computed showAllCount: {{showAllCount}}</p>
+    <p>Method desc : {{descMethod()}}</p>
 </div>
 
 <script src="app.js"></script>
