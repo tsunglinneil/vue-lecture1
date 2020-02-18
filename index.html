@@ -1,6 +1,23 @@
 <script src="https://unpkg.com/vue/dist/vue.js"></script>
 
 <div id="app">
+    <div>
+        <button @click="status = !status">click to change status</button>
+        <p v-if="status">status is true</p>
+        <p v-else>status is false</p>
+        <p v-show="status">status is true</p>
+        <p v-show="!status">status is false</p>
+    </div>
+
+    <hr>
+
+    <ul>
+        <li v-for="day in days">Day {{ day }}</li>
+    </ul>
+
+    <ul>
+        <li v-for="(value, key, index) in movie">{{key}} : {{value}}({{index}})</li>
+    </ul>
 </div>
 
 <script src="app.js"></script>
