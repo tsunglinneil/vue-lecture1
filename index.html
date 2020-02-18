@@ -1,6 +1,13 @@
 <script src="https://unpkg.com/vue/dist/vue.js"></script>
 
 <div id="app">
+    <h1>{{greet}} ! {{name}} ~</h1>
+    <h1>{{greeting1()}}</h1>
+    <h1>{{greeting2()}}</h1>
+
+    <div>
+        <input type="text" v-bind:value="greet">
+    </div>
 </div>
 
 <script src="app.js"></script>
