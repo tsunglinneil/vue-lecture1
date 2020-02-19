@@ -2,6 +2,7 @@
 
 <div id="app">
     <div>
+        <h5>條件式範例</h5>
         <button @click="status = !status">click to change status</button>
         <p v-if="status">status is true</p>
         <p v-else>status is false</p>
@@ -11,12 +12,27 @@
 
     <hr>
 
+    <h5>迴圈範例1</h5>
     <ul>
         <li v-for="day in days">Day {{ day }}</li>
     </ul>
 
+    <h5>迴圈範例2 - 物件處理</h5>
     <ul>
         <li v-for="(value, key, index) in movie">{{key}} : {{value}}({{index}})</li>
+    </ul>
+
+    <h5>巢狀範例</h5>
+    <ul>
+        <li v-for="(value, key) in movie">
+            <template v-if="Array.isArray(value)">
+                {{key}}
+                <ul>
+                    <li v-for="element in value">{{element}}</li>
+                </ul>
+            </template>
+            <template v-else>{{value}}</template>
+        </li>
     </ul>
 </div>
 

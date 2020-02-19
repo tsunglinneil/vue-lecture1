@@ -6,7 +6,8 @@ new Vue({
     movie: {
       title: 'Interstellar',
       year: '2014',
-      star: "5"
+      star: "5",
+      area: ['Taiwan', 'American', 'Japan']
     }
   }
 });
